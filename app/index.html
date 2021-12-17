@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VibeMe</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <h1>VibMe!</h1>
+    <h2>envoyez des messages rapidement et discrètement</h2>
+    <input id="serverip" placeholder="IP DU SERVEUR" type="text">
+    <button onclick="establishConnectionToServer()">Se connecter</button>
+    <br>
+    <br>
+    <button onclick="sendHello()">Dire bonjour</button>
+    <script src="app.js"></script>
+    <script>
+        if('serviceworker' in navigator) {
+            navigator.serviceWorker.register("/service-worker.js");
+        }
+    </script>
+    
+</body>
+</html>
