@@ -15,7 +15,31 @@
     <button onclick="establishConnectionToServer()">Se connecter</button>
     <br>
     <br>
-    <button onclick="sendHello()">Dire bonjour</button>
+    <fieldset >
+        <legend>Commun</legend>
+        <button onclick="send('hello')">Salut !</button>
+        <button onclick="send('howru')">Comment ça va ?</button>
+        <button onclick="send('wait')">Attends !</button>
+        <button onclick="send('a-sec')">Je reviens...</button>
+        <button onclick="send('bye')">A plus !</button>
+        <button onclick="send('thanks')">Merci</button>
+        <button onclick="send('please')">S'il te plaît</button>
+        <button onclick="send('good')">Bien !</button>
+        <button onclick="send('bad')">Mal...</button>
+        <button onclick="send('yes')">Oui</button>
+        <button onclick="send('no')">Non</button>
+        <button onclick="send('stop')">Stop!</button>
+        <button onclick="send('dm')">écris-le...</button>
+
+    </fieldset>
+    <br>
+    <br>
+    <fieldset style="display: flex;justify-content: center;">
+        <legend>Écrire un message personnalisé (ne fera pas vibrer les autres)</legend>
+        <textarea   rows="4" cols="50" id="dm" type="text"></textarea> <button onclick="sendcustom()">Envoyer</button>
+    </fieldset>
+    <p id="history">Ici commence la conversation sur le serveur (depuis que vous avez rejoint)</p>
+
     <script src="app.js"></script>
     <script>
         if('serviceworker' in navigator) {

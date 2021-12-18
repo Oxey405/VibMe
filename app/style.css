@@ -4,3 +4,13 @@ body {
     font-family: 'Roboto Mono', monospace;
     text-align: center;
 }
+button {
+    
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(60, 142, 236);
+    color: white;
+    font-weight: bold;
+    font-size: 2vh;
+    min-height: 5vh;
+}
